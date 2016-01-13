@@ -1,0 +1,22 @@
+{
+    "name": "spiderling-php/phpunit-spiderling",
+    "description": "PHPUnit extension for seamlessly integrating spiderling",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Ivan Kerin",
+            "email": "ikerin@gmail.com",
+            "role": "Author"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SP\\PhpunitSpiderling\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SP\\PhpunitSpiderling\\Test\\": "tests/src/"
+        }
+    }
+}
