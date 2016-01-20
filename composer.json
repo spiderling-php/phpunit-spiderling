@@ -9,14 +9,29 @@
             "role": "Author"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/spiderling-php/phantom-driver"
+        }
+    ],
+    "require": {
+        "spiderling-php/spiderling": "dev-master",
+        "spiderling-php/phpunit-failure-action": "dev-master",
+        "guzzlehttp/psr7": "^1.2"
+    },
+    "require-dev": {
+        "spiderling-php/phantom-driver": "dev-master",
+        "symfony/process" : "^3.0"
+    },
     "autoload": {
         "psr-4": {
-            "SP\\PhpunitSpiderling\\": "src/"
+            "SP\\Phpunit\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "SP\\PhpunitSpiderling\\Test\\": "tests/src/"
+            "SP\\Phpunit\\Test\\": "tests/src/"
         }
     }
 }
