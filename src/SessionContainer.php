@@ -32,6 +32,10 @@ class SessionContainer
         $this->builders[$name] = $function;
     }
 
+    /**
+     * @param  string $name
+     * @return callable
+     */
     public function getBuilder($name)
     {
         if (empty($this->builders[$name])) {
@@ -45,16 +49,29 @@ class SessionContainer
         return $this->builders[$name];
     }
 
+    /**
+     * @param string         $name
+     * @param CrawlerSession $session
+     */
     public function set($name, CrawlerSession $session)
     {
         $this->sessions[$name] = $session;
     }
 
+    /**
+     * @param  string  $name
+     * @return boolean
+     */
     public function has($name)
     {
         return isset($this->sessions[$name]);
     }
 
+    /**
+     * @param  string $name
+     * @throws InvalidArgumentException if no builder with that name was found
+     * @return CrawlerSession|BrowserSession
+     */
     public function get($name)
     {
         if (false === $this->has($name)) {
