@@ -20,10 +20,6 @@
         "spiderling-php/phpunit-failure-action": "dev-master",
         "guzzlehttp/psr7": "^1.2"
     },
-    "require-dev": {
-        "spiderling-php/phantom-driver": "dev-master",
-        "symfony/process" : "^3.0"
-    },
     "autoload": {
         "psr-4": {
             "SP\\Phpunit\\": "src/"
